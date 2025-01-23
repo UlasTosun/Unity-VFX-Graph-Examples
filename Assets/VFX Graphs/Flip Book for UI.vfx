@@ -54,7 +54,7 @@ MonoBehaviour:
   m_ParameterInfo:
   - name: Texture2D
     path: Texture2D
-    tooltip: 
+    tooltip: Flip book texture.
     space: -1
     spaceable: 0
     sheetType: m_NamedObject
@@ -68,9 +68,9 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Flip Book Size
-    path: Flip Book Size
-    tooltip: 
+  - name: Flip Book Dimensions
+    path: Flip Book Dimensions
+    tooltip: Dimensions of the flip book.
     space: -1
     spaceable: 0
     sheetType: m_Vector2f
@@ -86,7 +86,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: FPS
     path: FPS
-    tooltip: 
+    tooltip: The higher FPS the higher flip book playback speed.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -102,7 +102,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Size
     path: Size
-    tooltip: 
+    tooltip: Final scale.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -118,7 +118,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Rotation
     path: Rotation
-    tooltip: 
+    tooltip: Rotation of the flip book.
     space: -1
     spaceable: 0
     sheetType: m_Vector3f
@@ -134,7 +134,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Color
     path: Color
-    tooltip: 
+    tooltip: Final color.
     space: -1
     spaceable: 0
     sheetType: m_Vector4f
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Flip book texture.
   m_Nodes:
   - m_Id: 1
     linkedSlots:
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Final color.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: The higher FPS the higher flip book playback speed.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614675}
-  m_ExposedName: Flip Book Size
+  m_ExposedName: Flip Book Dimensions
   m_Exposed: 1
   m_Order: 1
   m_Category: 
@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Dimensions of the flip book.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Final scale.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Rotation of the flip book.
   m_Nodes:
   - m_Id: 1
     linkedSlots:

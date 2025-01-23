@@ -12,15 +12,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01270efd3285ea4a9d6c555cb0a8027, type: 3}
   m_Name: VFXUI
   m_EditorClassIdentifier: 
-  groupInfos: []
+  groupInfos:
+  - title: Randomize Velocity
+    position:
+      serializedVersion: 2
+      x: 651
+      y: 491
+      width: 485
+      height: 341
+    contents:
+    - model: {fileID: 8926484042661614693}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614766}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614771}
+      id: 0
+      isStickyNote: 0
+  - title: Sample Point Cache
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 100
+      height: 100
+    contents:
+    - model: {fileID: 8926484042661614652}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614634}
+      id: 0
+      isStickyNote: 0
   stickyNoteInfos: []
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 24
+    x: -1
     y: -249
-    width: 1599
-    height: 1966
+    width: 1624
+    height: 2014
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,7 +85,7 @@ MonoBehaviour:
   m_ParameterInfo:
   - name: Ground for Collision
     path: 
-    tooltip: 
+    tooltip: Ground for particles to use in collision detection.
     space: 1
     spaceable: 1
     sheetType: 
@@ -101,7 +132,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Velocity
     path: Velocity
-    tooltip: 
+    tooltip: Initial velocity for particles.
     space: -1
     spaceable: 0
     sheetType: m_Vector3f
@@ -703,7 +734,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614589}
   - {fileID: 8926484042661614703}
   - {fileID: 8926484042661614706}
-  m_UIPosition: {x: 1199, y: 1186}
+  m_UIPosition: {x: 1199, y: 1246}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -1066,7 +1097,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 350, y: 278}
+  m_UIPosition: {x: 279, y: 278}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -1943,7 +1974,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 878, y: 690}
+  m_UIPosition: {x: 840, y: 696}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3174,7 +3205,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Ground for particles to use in collision detection.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -3527,7 +3558,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Initial velocity for particles.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -3535,7 +3566,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661614694}
     - outputSlot: {fileID: 8926484042661614767}
       inputSlot: {fileID: 8926484042661614772}
-    position: {x: 715.47174, y: 573.283}
+    position: {x: 675.6227, y: 580.5283}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -3692,7 +3723,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 878, y: 542}
+  m_UIPosition: {x: 840, y: 549}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:

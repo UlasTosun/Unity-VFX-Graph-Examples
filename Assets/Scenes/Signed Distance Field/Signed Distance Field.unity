@@ -387,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587772833}
   m_Layer: 0
-  m_Name: Move This Slowly to Move SDF Center
+  m_Name: MOVE This SLOWLY to Move SDF Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

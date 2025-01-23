@@ -12,15 +12,124 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01270efd3285ea4a9d6c555cb0a8027, type: 3}
   m_Name: VFXUI
   m_EditorClassIdentifier: 
-  groupInfos: []
-  stickyNoteInfos: []
+  groupInfos:
+  - title: Calculate Initial Velocity
+    position:
+      serializedVersion: 2
+      x: 1146
+      y: 2056
+      width: 475
+      height: 266
+    contents:
+    - model: {fileID: 8926484042661614830}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614840}
+      id: 0
+      isStickyNote: 0
+  - title: Calculate Delay
+    position:
+      serializedVersion: 2
+      x: 858
+      y: 2954
+      width: 425
+      height: 229
+    contents:
+    - model: {fileID: 8926484042661615092}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615136}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615141}
+      id: 0
+      isStickyNote: 0
+  - title: Calculate Gravity Factor
+    position:
+      serializedVersion: 2
+      x: 33
+      y: 2467
+      width: 1262
+      height: 325
+    contents:
+    - model: {fileID: 8926484042661615022}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615024}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615029}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615038}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615059}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615063}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615057}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615002}
+      id: 0
+      isStickyNote: 0
+  - title: Calculate Particle Count
+    position:
+      serializedVersion: 2
+      x: -626
+      y: 1539
+      width: 1217
+      height: 371
+    contents:
+    - model: {fileID: 8926484042661614712}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615082}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615086}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615074}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615077}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615072}
+      id: 0
+      isStickyNote: 0
+  stickyNoteInfos:
+  - title: 
+    position:
+      serializedVersion: 2
+      x: 2211
+      y: 3137
+      width: 120
+      height: 101
+    contents: Use subpixel anti-alising, otherwise small paritcles will be vanished.
+    theme: Classic
+    textSize: Small
+  - title: 
+    position:
+      serializedVersion: 2
+      x: 2213
+      y: 2869
+      width: 120
+      height: 101
+    contents: Use custom UI shader to be able to render particles at canvas.
+    theme: Classic
+    textSize: Small
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -339
+    x: -859
     y: 1395
-    width: 2495
-    height: 1810
+    width: 3192
+    height: 1843
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31,7 +140,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: VFX for UI
+  m_Name: Point Cache for UI
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -72,7 +181,7 @@ MonoBehaviour:
   m_ParameterInfo:
   - name: Texture2D
     path: Texture2D
-    tooltip: 
+    tooltip: Texture for particles. Each created particle uses this texture.
     space: -1
     spaceable: 0
     sheetType: m_NamedObject
@@ -88,7 +197,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Velocity
     path: Velocity
-    tooltip: 
+    tooltip: Initial velocity of particles.
     space: -1
     spaceable: 0
     sheetType: m_Vector3f
@@ -104,7 +213,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Gravity
     path: Gravity
-    tooltip: 
+    tooltip: Gravity for particles.
     space: -1
     spaceable: 0
     sheetType: m_Vector3f
@@ -120,7 +229,8 @@ MonoBehaviour:
     descendantCount: 0
   - name: Gravity Factor
     path: Gravity Factor
-    tooltip: 
+    tooltip: Change in the gravity based on particle position for a better falling
+      efect.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -136,7 +246,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Particle Size
     path: Particle Size
-    tooltip: 
+    tooltip: Particle scale.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -152,7 +262,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Sampling Rate
     path: Sampling Rate
-    tooltip: 
+    tooltip: Sampling rate of the Point Cache.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -168,7 +278,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Delay
     path: Delay
-    tooltip: 
+    tooltip: Delay before falling.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -1316,7 +1426,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 359, y: 1950}
+  m_UIPosition: {x: -187, y: 1597}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -1686,7 +1796,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -339, y: 2009}
+  m_UIPosition: {x: -860, y: 2042}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -1731,13 +1841,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Texture for particles. Each created particle uses this texture.
   m_Nodes:
   - m_Id: 1
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614793}
       inputSlot: {fileID: 8926484042661615197}
-    position: {x: 1440.9058, y: 2822.9436}
+    position: {x: 1442.717, y: 2978.717}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -2327,7 +2437,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1327, y: 2184}
+  m_UIPosition: {x: 1325, y: 2188}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -2688,7 +2798,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Initial velocity of particles.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -2696,7 +2806,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661614831}
     - outputSlot: {fileID: 8926484042661614841}
       inputSlot: {fileID: 8926484042661614802}
-    position: {x: 1098.566, y: 2143.6982}
+    position: {x: 1170.1133, y: 2113.8115}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -2874,13 +2984,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Gravity for particles.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614938}
       inputSlot: {fileID: 8926484042661614677}
-    position: {x: 1461.736, y: 2713.3586}
+    position: {x: 1159.2454, y: 2853.736}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -3098,7 +3208,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1361, y: 2369}
+  m_UIPosition: {x: 1429, y: 2373}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -3122,7 +3232,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1396, y: 2564}
+  m_UIPosition: {x: 1070, y: 2589}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3254,7 +3364,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 849, y: 2636}
+  m_UIPosition: {x: 619, y: 2679}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -3310,7 +3420,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1075, y: 2617}
+  m_UIPosition: {x: 844, y: 2660}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3447,7 +3557,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1075, y: 2482}
+  m_UIPosition: {x: 844, y: 2525}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3549,7 +3659,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 868, y: 2482}
+  m_UIPosition: {x: 638, y: 2525}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3639,7 +3749,8 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 1
-  m_Tooltip: 
+  m_Tooltip: Change in the gravity based on particle position for a better falling
+    efect.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -3647,7 +3758,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661615031}
     - outputSlot: {fileID: 8926484042661615058}
       inputSlot: {fileID: 8926484042661615061}
-    position: {x: 158.49057, y: 2275.019}
+    position: {x: 57.056606, y: 2686.1887}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -3702,7 +3813,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 481, y: 2482}
+  m_UIPosition: {x: 250, y: 2525}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3838,7 +3949,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 678, y: 2482}
+  m_UIPosition: {x: 447, y: 2525}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4031,13 +4142,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Particle scale.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661615071}
       inputSlot: {fileID: 8926484042661615199}
-    position: {x: 1430.9435, y: 2999.5474}
+    position: {x: 1442.717, y: 3060.2266}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -4114,7 +4225,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 1
-  m_Tooltip: 
+  m_Tooltip: Sampling rate of the Point Cache.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -4122,7 +4233,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661615079}
     - outputSlot: {fileID: 8926484042661615073}
       inputSlot: {fileID: 8926484042661615083}
-    position: {x: -272.6038, y: 2144.604}
+    position: {x: -601.3585, y: 1820.3774}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -4177,7 +4288,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 158, y: 2003}
+  m_UIPosition: {x: -391, y: 1683}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4272,7 +4383,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -42, y: 2003}
+  m_UIPosition: {x: -589, y: 1650}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4409,7 +4520,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 726, y: 1950}
+  m_UIPosition: {x: 201, y: 1597}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4511,7 +4622,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 925, y: 1950}
+  m_UIPosition: {x: 414, y: 1597}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4713,7 +4824,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 887, y: 2856}
+  m_UIPosition: {x: 882, y: 3012}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -4791,13 +4902,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Delay before falling.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661615137}
       inputSlot: {fileID: 8926484042661615143}
-    position: {x: 909.2831, y: 2936.1511}
+    position: {x: 903.8491, y: 3092.8303}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -4914,7 +5025,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1073, y: 2856}
+  m_UIPosition: {x: 1068, y: 3012}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:

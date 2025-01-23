@@ -12,8 +12,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01270efd3285ea4a9d6c555cb0a8027, type: 3}
   m_Name: VFXUI
   m_EditorClassIdentifier: 
-  groupInfos: []
-  stickyNoteInfos: []
+  groupInfos:
+  - title: Calculate Particle Count
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 100
+      height: 100
+    contents:
+    - model: {fileID: 8926484042661614733}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614790}
+      id: 1
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614727}
+      id: 0
+      isStickyNote: 0
+  - title: Field Transform
+    position:
+      serializedVersion: 2
+      x: 83
+      y: 354
+      width: 437
+      height: 202
+    contents:
+    - model: {fileID: 8926484042661614668}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614853}
+      id: 0
+      isStickyNote: 0
+  - title: Animate Scale (Pulse)
+    position:
+      serializedVersion: 2
+      x: -1021
+      y: 570
+      width: 1884
+      height: 276
+    contents:
+    - model: {fileID: 8926484042661614830}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614833}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614838}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614846}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614880}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614882}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614886}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614898}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614900}
+      id: 0
+      isStickyNote: 0
+  - title: Calculate Attraction Speed
+    position:
+      serializedVersion: 2
+      x: 95
+      y: 873
+      width: 776
+      height: 369
+    contents:
+    - model: {fileID: 8926484042661614765}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614767}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614775}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614780}
+      id: 0
+      isStickyNote: 0
+  stickyNoteInfos:
+  - title: 
+    position:
+      serializedVersion: 2
+      x: 1420
+      y: 1234
+      width: 120
+      height: 101
+    contents: Use subpixel anti-alising, otherwise small paritcles will be vanished.
+    theme: Classic
+    textSize: Small
   categories:
   - name: SDF Settings
     collapsed: 0
@@ -21,10 +117,10 @@ MonoBehaviour:
     collapsed: 0
   uiBounds:
     serializedVersion: 2
-    x: -1060
+    x: -1021
     y: -256
-    width: 2425
-    height: 1589
+    width: 2561
+    height: 1591
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,7 +183,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: SDF
     path: SDF
-    tooltip: 
+    tooltip: Signed Distance Field.
     space: -1
     spaceable: 0
     sheetType: m_NamedObject
@@ -103,7 +199,8 @@ MonoBehaviour:
     descendantCount: 0
   - name: Field Transform
     path: 
-    tooltip: 
+    tooltip: Transform which markes the position of the SDF. Change its properties
+      to change SDF.
     space: 1
     spaceable: 1
     sheetType: 
@@ -166,7 +263,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Ground
     path: 
-    tooltip: 
+    tooltip: Particles are positioned on the ground initially.
     space: 0
     spaceable: 1
     sheetType: 
@@ -213,7 +310,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Speed Over Lifetime
     path: Speed Over Lifetime
-    tooltip: 
+    tooltip: Animation curve for the speed over lifetime.
     space: -1
     spaceable: 0
     sheetType: m_AnimationCurve
@@ -244,7 +341,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Pulse Power
     path: Pulse Power
-    tooltip: 
+    tooltip: Pulse power for the scale of the shape.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -260,7 +357,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Pulse Speed
     path: Pulse Speed
-    tooltip: 
+    tooltip: Pulse speed for the scale of the shape.
     space: -1
     spaceable: 0
     sheetType: m_Float
@@ -1788,13 +1885,14 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Transform which markes the position of the SDF. Change its properties
+    to change SDF.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614669}
       inputSlot: {fileID: 8926484042661614854}
-    position: {x: -26.264153, y: 478.1887}
+    position: {x: 107.77359, y: 445.58493}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -2386,7 +2484,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 377, y: -119}
+  m_UIPosition: {x: 379, y: -120}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -2807,14 +2905,15 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Particles are positioned on the ground initially.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614756}
       inputSlot: {fileID: 8926484042661614906}
-    position: {x: 700.0755, y: 368.6038}
-    expandedSlots: []
+    position: {x: 746.2642, y: 369.50946}
+    expandedSlots:
+    - {fileID: 8926484042661614756}
     expanded: 0
     supecollapsed: 0
 --- !u!114 &8926484042661614756
@@ -3160,13 +3259,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Animation curve for the speed over lifetime.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614766}
       inputSlot: {fileID: 8926484042661614768}
-    position: {x: 106.86793, y: 788.8302}
+    position: {x: 119.54717, y: 931.0189}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -3220,7 +3319,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 371, y: 789}
+  m_UIPosition: {x: 384, y: 931}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3348,7 +3447,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -1060, y: 767}
+  m_UIPosition: {x: -1005, y: 916}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -3372,7 +3471,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 403, y: 913}
+  m_UIPosition: {x: 416, y: 1055}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3471,7 +3570,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 673, y: 789}
+  m_UIPosition: {x: 686, y: 931}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3727,13 +3826,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Signed Distance Field.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614791}
       inputSlot: {fileID: 8926484042661614649}
-    position: {x: 719.09436, y: 428.37738}
+    position: {x: 746.2642, y: 481.81134}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -3741,7 +3840,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614791}
       inputSlot: {fileID: 8926484042661614731}
-    position: {x: 222.79247, y: -86.9434}
+    position: {x: 221.88681, y: -119.54717}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -3796,7 +3895,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -343, y: 613}
+  m_UIPosition: {x: -343, y: 628}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3890,7 +3989,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -545, y: 613}
+  m_UIPosition: {x: -545, y: 628}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3985,7 +4084,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 154, y: 613}
+  m_UIPosition: {x: 154, y: 628}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4122,7 +4221,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -65, y: 613}
+  m_UIPosition: {x: -65, y: 628}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4258,7 +4357,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 185, y: 445}
+  m_UIPosition: {x: 319, y: 412}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5194,13 +5293,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 1
-  m_Tooltip: 
+  m_Tooltip: Pulse power for the scale of the shape.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614881}
       inputSlot: {fileID: 8926484042661614840}
-    position: {x: -61.584908, y: 741.7359}
+    position: {x: -61.584908, y: 756.22644}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -5254,7 +5353,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 363, y: 613}
+  m_UIPosition: {x: 363, y: 628}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5390,7 +5489,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 567, y: 613}
+  m_UIPosition: {x: 567, y: 628}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5752,13 +5851,13 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Pulse speed for the scale of the shape.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614899}
       inputSlot: {fileID: 8926484042661614901}
-    position: {x: -996.22644, y: 613.1321}
+    position: {x: -996.22644, y: 627.6227}
     expandedSlots: []
     expanded: 0
     supecollapsed: 0
@@ -5812,7 +5911,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -758, y: 613}
+  m_UIPosition: {x: -758, y: 628}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:

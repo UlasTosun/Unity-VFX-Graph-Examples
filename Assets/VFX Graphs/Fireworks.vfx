@@ -13,7 +13,47 @@ MonoBehaviour:
   m_Name: VFXUI
   m_EditorClassIdentifier: 
   groupInfos: []
-  stickyNoteInfos: []
+  stickyNoteInfos:
+  - title: Trails
+    position:
+      serializedVersion: 2
+      x: 2342
+      y: 1060
+      width: 127
+      height: 101
+    contents: Create trails at every frame with GPU Events
+    theme: Classic
+    textSize: Small
+  - title: Explosion
+    position:
+      serializedVersion: 2
+      x: 3280
+      y: 926
+      width: 127
+      height: 101
+    contents: Create an explosion when a paritcle dies with GPU Events
+    theme: Classic
+    textSize: Small
+  - title: 
+    position:
+      serializedVersion: 2
+      x: 2326
+      y: 2599
+      width: 120
+      height: 101
+    contents: Use subpixel anti-alising, otherwise small paritcles will be vanished.
+    theme: Classic
+    textSize: Small
+  - title: 
+    position:
+      serializedVersion: 2
+      x: 4144
+      y: 3413
+      width: 120
+      height: 101
+    contents: Use subpixel anti-alising, otherwise small paritcles will be vanished.
+    theme: Classic
+    textSize: Small
   categories: []
   uiBounds:
     serializedVersion: 2
@@ -62,7 +102,7 @@ MonoBehaviour:
   m_ParameterInfo:
   - name: Launch Line Start
     path: 
-    tooltip: 
+    tooltip: Start point of the launch line.
     space: 0
     spaceable: 1
     sheetType: 
@@ -93,7 +133,7 @@ MonoBehaviour:
     descendantCount: 0
   - name: Launch Line End
     path: 
-    tooltip: 
+    tooltip: End point of the launch line.
     space: 0
     spaceable: 1
     sheetType: 
@@ -1134,7 +1174,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614589}
   - {fileID: 8926484042661614650}
   - {fileID: 8926484042661614653}
-  m_UIPosition: {x: 942, y: 1123}
+  m_UIPosition: {x: 940, y: 1187}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5809,7 +5849,7 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
-  title: Trail
+  title: Subparticle Trail
   m_Owners:
   - {fileID: 8926484042661614895}
   - {fileID: 8926484042661614893}
@@ -6457,7 +6497,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: Start point of the launch line.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -6674,7 +6714,7 @@ MonoBehaviour:
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 0
-  m_Tooltip: 
+  m_Tooltip: End point of the launch line.
   m_Nodes:
   - m_Id: 0
     linkedSlots:
