@@ -20,13 +20,13 @@ public class PointCacheManager : MonoBehaviour {
 
     void Start() {
         Invoke(nameof(PlayVFX), 1f);
-        _rigidbody.velocity = transform.forward * _speed;
+        _rigidbody.linearVelocity = transform.forward * _speed;
     }
 
 
 
     private void PlayVFX() {
-        _vfx.SetVector3(positionAttribute, _rigidbody.velocity);
+        _vfx.SetVector3(positionAttribute, _rigidbody.linearVelocity);
         _rigidbody.isKinematic = true;
         _vfx.Play();
         _meshRenderer.enabled = false;
