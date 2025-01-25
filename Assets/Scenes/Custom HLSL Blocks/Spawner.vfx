@@ -2953,7 +2953,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615115}
   m_OutputSlots:
   - {fileID: 8926484042661615116}
-  m_OperatorName: Custom HLSL
+  m_OperatorName: Custom HLSL (Tween Loop)
   m_HLSLCode: "float FloatFunction(in float value)\n{\n  return value;\n}"
   m_ShaderFile: {fileID: 10900000, guid: 8be94cd23a136694b97a6f8737caa0bc, type: 3}
   m_AvailableFunctions:
