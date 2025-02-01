@@ -13,7 +13,7 @@ According to the [documentation]( https://docs.unity3d.com/Packages/com.unity.vi
 ![Flip Book on UI](Screenshots/FlipbookOnUI.png)<br/><br/>
 
 
-**Point Cache:** This case includes basics of Point Caches in VFX Graph. Also, it includes a C# script to control VFX Graphs and set their properties via C# API.
+**Point Cache:** This case includes basics of Point Caches in VFX Graph. Also, it includes a C# script to control VFX Graphs and set their properties via C# API.<br/><br/>
 
 
 **Point Cache on UI:** This case provides an example to show how to play VFXs on UI by using a custom Sprite Unlit Shader Graph for UI.
@@ -24,7 +24,7 @@ According to the [documentation]( https://docs.unity3d.com/Packages/com.unity.vi
 ![Signed Distance Field](Screenshots/SDF.png)<br/><br/>
 
 
-**Custom HLSL Nodes:** This case demonstrates how to inject custom HLSL codes to VFX Graph Blocks and Operators.It breaks the limitations of the built-in nodes and gives more flexibility and control on the graph.
+**Custom HLSL Nodes:** This case demonstrates how to inject custom HLSL codes to VFX Graph Blocks and Operators.It breaks the limitations of the built-in nodes and gives more flexibility and control on the graph.<br/><br/>
 
 ## VFX Graph vs. Particle System
 
